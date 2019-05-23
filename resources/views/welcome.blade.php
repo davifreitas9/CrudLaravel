@@ -39,20 +39,7 @@
                 <div class="title m-b-md">
                     Comercial Laravel
                 </div>
-                <div class="links">
-                    <a href="">
-                        <i class="fa fa-file-text"> Documentação</i>
-                    </a>
-                    <a href="">
-                        <i class="fa fa-youtube-play"> Youtube</i>
-                    </a>
-                    <a href="">
-                        <i class="fa fa-github"> GitLab</i>
-                    </a>                   
-                    <a href="">
-                        <i class="fa fa-info"> Sobre</i>
-                    </a>
-                </div>
+                
             </div>
         </div>
     </body>

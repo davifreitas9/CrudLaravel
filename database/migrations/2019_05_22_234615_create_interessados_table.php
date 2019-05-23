@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateImoveisTable extends Migration
+class CreateInteressadosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,10 @@ class CreateImoveisTable extends Migration
      */
     public function up()
     {
-        Schema::create('imoveis', function (Blueprint $table) {
+        Schema::create('interessados', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('tipo', 50);
-            $table->string('pretensao', 50);
-            $table->string('titulo', 50);
-            $table->string('detalhes', 50);
-            $table->string('quartos', 50);
-            $table->string('valor', 5, 2);
+            $table->string('nome', 50);
+            $table->string('email', 50);
             $table->timestamps();
             $table->softDeletes();
         });
@@ -33,6 +29,6 @@ class CreateImoveisTable extends Migration
      */
     public function down()
     {
-        Schema::drop('imoveis');
+        Schema::drop('interessados');
     }
 }

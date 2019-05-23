@@ -34,7 +34,7 @@ class ImovelController extends Controller
         return view('alter-imovel',compact('imovel'));
     }
     public function update(Request $request, $id){
-        $product = Imovel::findOrFail($id);
+        $imovel = Imovel::findOrFail($id);
         $imovel->tipo = $request->tipo;
         $imovel->pretensao = $request->pretensao;
         $imovel->titulo= $request->titulo;

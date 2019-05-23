@@ -39,7 +39,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12" id="center"> 
-                        <h1><b>Imoveis</b></h1>
+                        <h1><b>Interessados</b></h1>
                         <br>
                     </div>
                 </div>
@@ -47,10 +47,10 @@
                     <div class="col-md-12">
                         <ol class="breadcrumb">
                             <li><a href="#">Panel</a></li>                  
-                            <li class="active">Imoveis</li>
+                            <li class="active">Interessados</li>
                         </ol>
-                        <br>house
-                        <a href="{{route('imovel.create')}}" 
+                        <br>
+                        <a href="{{route('interessado.create')}}" 
                            class="btn btn-default btn-sm pull-right">
                             <span class="glyphicon glyphicon-plus"></span> Adicionar</a>
                         <a href="" 
@@ -73,39 +73,30 @@
                 <div class="row">
                     <div class="col-md-12">   
                         <br />
-                        <h4 id="center"><b>IMOVEIS CADASTRADOS ({{$total}})</b></h4>
+                        <h4 id="center"><b>INTERESSADOS CADASTRADOS ({{$total}})</b></h4>
                         <br>
                         <div class="table-responsive">
                             <table class="table table-hover">
                                 <thead>
                                     <tr>
                                         <th id="center">Código</th>
-                                        <th>Tipo</th>
-                                        <th>Pretensão</th>
-                                        <th id="center">Titulo</th>
-                                        <th>Detalhes</th>                
-                                        <th id="center">Quartos</th>                
-                                        <th id="center">Valor</th>                
+                                        <th>Nome</th>
+                                        <th>E-mail</th>                
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach($imoveis as $imovel)
+                                    @foreach($interessados as $interessado)
                                     <tr>
-                                        <td id="center">{{$imovel->id}}</td>
-                                        <td title="Tipo">{{$imovel->tipo}}</td>
-                                        <td title="Pretensão">{{$imovel->pretensao}}</td>
-                                        <td title="Quantidade" id="center">{{$imovel->titulo}}</td>
-                                        <td title="Titulo" id="center">{{$imovel->detalhes}}</td>
-                                        <td title="Quartos" id="center">{{$imovel->quartos}}</td>
-                                        <td title="Valor">R$ {{number_format($imovel->valor, 2,',','.')}}</td> 
-                                        
+                                        <td id="center">{{$interessado->id}}</td>
+                                        <td title="Nome">{{$interessado->nome}}</td>
+                                        <td title="E-mail">{{$interessado->email}}</td>
                                         <td id="center">
-                                            <a href="{{route('imovel.edit', $imovel->id)}}" 
+                                            <a href="{{route('interessado.edit', $interessado->id)}}" 
                                                data-toggle="tooltip" 
                                                data-placement="top"
                                                title="Alterar"><i class="fa fa-pencil"></i></a>
                                             &nbsp;<form style="display: inline-block;" method="POST" 
-                                                        action="{{route('imovel.destroy', $imovel->id)}}"                                                        
+                                                        action="{{route('interessado.destroy', $interessado->id)}}"                                                        
                                                         data-toggle="tooltip" data-placement="top"
                                                         title="Excluir" 
                                                         onsubmit="return confirm('Confirma exclusão?')">
